@@ -19,13 +19,10 @@ function RegisterPage() {
       const response = await useRegister(data);
       if (response.status === 201) {
         navigate(`/${PublicRoutes.LOGIN}`);
-        console.log(response);
       } else if (response.status === 400) {
         alert("User already exists");
       } else if (response.status === 500) {
-        console.log("Internal server error");
       } else {
-        console.log("Error...", response.status);
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -42,7 +39,7 @@ function RegisterPage() {
   }
 
   return (
-    <>
+    <div className="h-screen w-screen flex justify-center items-center flex-col gap-2">
       <h1>Register</h1>
 
       <form
@@ -94,7 +91,7 @@ function RegisterPage() {
           Login
         </Link>
       </div>
-    </>
+    </div>
   );
 }
 export default RegisterPage;

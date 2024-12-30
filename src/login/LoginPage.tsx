@@ -16,10 +16,8 @@ function LoginPage() {
 
   const navigate = useNavigate();
   async function onSubmit(data: any) {
-    console.log(data);
     try {
       const response = await useLogin(data);
-      console.log(response);
 
       if (response.status === 200) {
         createUser(response.data.token, data.username);
@@ -27,9 +25,7 @@ function LoginPage() {
       } else if (response.status === 400) {
         alert("Unauthorized");
       } else if (response.status === 500) {
-        console.log("Internal server error");
       } else {
-        console.log("Error...", response.status);
       }
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -45,7 +41,7 @@ function LoginPage() {
   }
 
   return (
-    <>
+    <div className="h-screen w-screen flex justify-center items-center flex-col gap-2">
       <h1>Login</h1>
 
       <form
@@ -97,7 +93,7 @@ function LoginPage() {
           Register
         </Link>
       </div>
-    </>
+    </div>
   );
 }
 export default LoginPage;

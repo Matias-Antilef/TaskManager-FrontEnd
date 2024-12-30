@@ -26,8 +26,8 @@ function Header() {
         </div>
         <div className="w-full justify-center flex py-5 gap-3">
           <button
-            onClick={() => setShowModal(true)}
             className="bg-primary text-white p-3 font-semibold rounded-lg"
+            onClick={() => setShowModal(true)}
           >
             Create new task
           </button>

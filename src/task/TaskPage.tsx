@@ -16,8 +16,6 @@ function TaskPage() {
     const fetchTasks = async () => {
       const tasksFromApi = await useGetTasks(statusFilter);
       getTaskContext(tasksFromApi);
-      console.log(tasksFromApi);
-      console.log(tasks);
     };
 
     fetchTasks();
