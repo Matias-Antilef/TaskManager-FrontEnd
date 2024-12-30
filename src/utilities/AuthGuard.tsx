@@ -4,7 +4,7 @@ function AuthGuard() {
   const jwt = localStorage.getItem("jwt");
 
   if (!jwt) {
-    return <Navigate to={`/${PublicRoutes.LOGIN}`} replace />;
+    return <Navigate to={`/${PublicRoutes.LOGIN}`} />;
   }
 
   return <Outlet />;

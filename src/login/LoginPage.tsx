@@ -70,7 +70,7 @@ function LoginPage() {
               required: "Password is required",
             })}
             className="w-full p-3 my-3 rounded-lg outline-none border-2"
-            placeholder="*****"
+            placeholder="enter your password"
           />
           {errors.password && (
             <p className="text-red-500 text-sm">
