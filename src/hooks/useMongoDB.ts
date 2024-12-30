@@ -1,8 +1,6 @@
 import axios from "axios";
 
-const API_URL =
-  import.meta.env.VITE_API_URL ||
-  "https://taskmanager-backend-production-3981.up.railway.app";
+const API_URL = import.meta.env.VITE_API_URL;
 
 export const useGetTasks = async (completed?: string) => {
   const response = await axios.get(
